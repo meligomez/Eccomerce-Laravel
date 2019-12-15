@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="contenedor">
-<div class="home-container">
+<div class="vehicles-container">
     <div class="lanzamientos">
         <h2>¿Conoces lo que está por venir?
             Podés reservar y ser el primero en tenerlo.
@@ -62,14 +62,14 @@
                                 <div class="descripcion-vehiculo">
                                       {{ $unVehiculo->descripcion }}
                                 </div>
+                                <div>
+                                   <a href="/vehicles/{{ $unVehiculo->id }}" class="btn">Ver detalle</a>
+                                </div>
                             </div>
                         </div>
 
                          @endforeach
                     </div>
-
-                    <div class="col-sm-6">slide 4</div>
-
             </div>
             </div>
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">

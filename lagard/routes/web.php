@@ -20,11 +20,15 @@ Auth::routes();
 
 
 //Rutas del header
-Route::get('/vehicles', 'ProductController@index')->name('vehicles');
+
 Route::get('/aboutUs',function () {
     return view('aboutUs');
 })->name('aboutUs');
 Route::get('/buy')->name('buy');
 Route::get('/edit/user')->name('editUser');
+
+//Rutas del vehículo
+Route::get('/vehicles', 'ProductController@index')->name('vehicles');
+Route::get('vehicles/{idVehiculo}','ProductController@detalleVehiculo');
 
 

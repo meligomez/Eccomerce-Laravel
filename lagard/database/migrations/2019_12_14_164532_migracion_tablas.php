@@ -50,14 +50,24 @@ class MigracionTablas extends Migration
         $table->integer('stock');
         $table->string('tipoProducto');
     });
-    //5 Item tiene FK a producto
+    //5 Detalle del producto
+    Schema::create('detail_products', function (Blueprint $table) {
+        $table->bigIncrements('id');
+        $table->unsignedBigInteger('product_id');
+        $table->string('fotoInterior1')->nullable();
+        $table->string('fotoInterior2')->nullable();
+        $table->string('fotoExterior1')->nullable();
+        $table->string('fotoExterior2')->nullable();
+        $table->timestamps();
+    });
+    //6 Item tiene FK a producto
     Schema::create('items', function (Blueprint $table) {
         $table->bigIncrements('id');
         $table->decimal('precio', 8, 2);
         $table->unsignedBigInteger('tipoProduct_id');
         $table->foreign('tipoProduct_id')->references('id')->on('products');
     });
-    //6 Compra_item (tabla intermedia)
+    //7 Compra_item (tabla intermedia)
     Schema::create('items_purchases', function (Blueprint $table) {
         $table->bigIncrements('id');
         $table->unsignedBigInteger('compra_id');
@@ -66,14 +76,14 @@ class MigracionTablas extends Migration
         $table->foreign('item_id')->references('id')->on('items');
         $table->integer('descuentoPorcentaje');
     });
-    //7 Carrito
+    //8 Carrito
     Schema::create('carts', function (Blueprint $table) {
         $table->bigIncrements('id');
         $table->unsignedBigInteger('user_id');
         $table->foreign('user_id')->references('id')->on('users');
         $table->boolean('estado');
     });
-    //8 Carrito_producto (tabla intermedia)
+    //9 Carrito_producto (tabla intermedia)
     Schema::create('carts_products', function (Blueprint $table) {
         $table->bigIncrements('id');
         $table->unsignedBigInteger('carrito_id');
@@ -92,22 +102,25 @@ class MigracionTablas extends Migration
     public function down()
     {
         // Eliminamos primero las tablas intermedias
-        // 1 - Carrito_producto
-        Schema::drop('carts_products');
-        //2 - Compra_items
-        Schema::drop('items_purchases');
+        // 1 - Detalle_producto
+        Schema::dropIfExists('detail_products');
+        // 2 - Carrito_producto
+        Schema::dropIfExists('carts_products');
+        //3 - Compra_items
+        Schema::dropIfExists('items_purchases');
         //Como ya no tenemos las TI podemos eliminar las q unicamente otras tablas tenian FK a ellas
-        //3 - Carrito
-        Schema::drop('carts');
-        //4 - Compra
-        Schema::drop('purchases');
-        //1 -  Item
-        Schema::drop('items');
-        //1 - Producto
-        Schema::drop('products');
-        //1 - Medio de pago
-        Schema::drop('payments');
-        //1 - usuarios esta la dejo comentada, xq es fundamental para el login!!
+        //4 - Carrito
+        Schema::dropIfExists('carts');
+        //5 - Compra
+        Schema::dropIfExists('purchases');
+        //8 - Medio de pago
+        Schema::dropIfExists('payments');
+        //6 -  Item
+        Schema::dropIfExists('items');
+        //7 - Producto
+        Schema::dropIfExists('products');
+
+        //9 - usuarios esta la dejo comentada, xq es fundamental para el login!!
         //Schema::drop('users');
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('username');

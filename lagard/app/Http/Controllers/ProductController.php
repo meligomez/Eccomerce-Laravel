@@ -15,4 +15,8 @@ class ProductController extends Controller
         $vehiculos= Product::all();
         return $vehiculos;
     }
+    public function detalleVehiculo($idVehiculo){
+       $unVehiculo= Product::find($idVehiculo);
+       return view('detalle-vehiculo',compact('unVehiculo'));
+    }
 }

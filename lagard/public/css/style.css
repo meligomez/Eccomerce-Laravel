@@ -1124,6 +1124,20 @@ display: inline;
     display:inline-block;
 }
 
-
-
-
+/*Estilo para el video de la vista de detalle vehicles*/
+.detalle-int-ext{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 700px;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.foto-principal
+{
+    width: 700px;
+    margin-left:20px;
+}
+.detalles-tecnicos{
+    float: left;
+}
