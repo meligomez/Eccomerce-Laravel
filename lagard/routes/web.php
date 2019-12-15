@@ -11,10 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Home
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
+// login, registro, olvidó su contraseña
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+//Rutas del header
+Route::get('/vehicles', 'ProductController@index')->name('vehicles');
+Route::get('/aboutUs',function () {
+    return view('aboutUs');
+})->name('aboutUs');
+Route::get('/buy')->name('buy');
+Route::get('/edit/user')->name('editUser');
+
+

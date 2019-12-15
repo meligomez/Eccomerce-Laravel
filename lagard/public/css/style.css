@@ -1,0 +1,1129 @@
+/*
+--------------------------------------------------------------
+ESTILOS UNICOS PARA home.php
+--------------------------------------------------------------
+*/
+#app{
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/backHome.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+  }
+
+
+  /*
+  --------------------------------------------------------------
+  HEADER
+  --------------------------------------------------------------
+  */
+  header{
+    background-color: #04042C;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    opacity: 0.8;
+    z-index: 4;
+  }
+
+  header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    margin:0px;
+    padding: 0px;
+  }
+
+  .lista_titulo{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin:0px 0px 0px 40px;
+    padding: 0px;
+  }
+
+  .lista_menu{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 40px 0px 0px;
+    padding: 0px;
+    width: 650px;
+  }
+
+  .dropdown{
+    display: none;
+  }
+
+  .lista_titulo li a{
+    font-family: 'Great Vibes',cursive;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+  }
+
+  .lista_menu li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-family: 'Dosis', sans-serif;
+  }
+  .lista_menu li a:hover{text-decoration: underline;color: white;}
+
+  .lista_menu li a img{
+    height: 30px;
+    width: 30px;
+  }
+
+
+  /*Agrego menú para Perfil Logueado*/
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #252545;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Dropdown Button */
+  .dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .menuLogueado {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /*
+  --------------------------------------------------------------
+  FOOTER
+  --------------------------------------------------------------
+  */
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px grey;
+    border-bottom: 1px grey;
+    height: 310px;
+    background-color: black;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .footer_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .empresa{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+  }
+
+  .empresa p a{
+    text-decoration: none;
+    color: grey;
+    font-family: 'Dosis', sans-serif;
+  }
+  .empresa p a:hover{color: white;font-family: 'Dosis', sans-serif;}
+  .nosotros_footer{
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .ayuda{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+  }
+
+  .ayuda p a{
+    text-decoration: none;
+    color: grey;
+    font-family: 'Dosis', sans-serif;
+  }
+  .ayuda p a:hover{text-decoration: none;color: white;font-family: 'Dosis', sans-serif;}
+  .ayuda_footer{
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .categoria{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+  }
+  .categoria p a{
+    text-decoration: none;
+    color: grey;
+    font-family: 'Dosis', sans-serif;
+  }
+  .categoria p a:hover{text-decoration: none;color: white;font-family: 'Dosis', sans-serif;}
+  .categoria_footer{
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .mpagos{
+    display: flex;
+    flex-direction: column;
+    justify-content:top;
+    align-items:center;
+  }
+  .mpagos p a{
+    text-decoration: none;
+    color: grey;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  .mpagos img{
+    height: 20px;
+    width: 35px;
+    padding-right:5px;
+    margin-top: 10px;
+  }
+
+  .tarjetas-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .ultima-tarjeta{
+    padding: 0;
+  }
+
+  .tarjetas-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .mpagos p a:hover{text-decoration: none;color: white;font-family: 'Dosis', sans-serif;}
+  .mpagos_footer{
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .copyright{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 0.5px solid white;
+    padding-top: 20px;
+    width: 100%
+
+  }
+  .copyright p{
+    text-decoration: none;
+    color: grey;
+    font-family: 'Dosis', sans-serif;
+  }
+  .copyright p:hover{text-decoration: none;color: white;font-family: 'Dosis', sans-serif;}
+
+  /*
+  --------------------------------------------------------------
+  MAIN
+  --------------------------------------------------------------
+  */
+  .main_home{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+
+  .contenedor-titulo-autos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    /* background-color: rgba(255, 255,255, 0.7); */
+    width: 950px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .titulo-autos{
+    color: #2E2E2E;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .bloque_autos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 950px;
+    /* background-color: rgba(255, 255,255, 0.5); */
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .contenedor-titulo-pickups{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    /* background-color: rgba(255, 255,255, 0.7); */
+    width: 950px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .titulo-pickups{
+    color: #2E2E2E;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .bloque_pickups{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 950px;
+    /* background-color: rgba(255, 255,255, 0.5); */
+    margin-bottom: 100px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .contenedor-titulo-van{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(255, 255,255, 0.7); */
+    width: 950px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .titulo-van{
+    color: #2E2E2E;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  .bloque_van{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 950px;
+    /* background-color: rgba(255, 255,255, 0.5); */
+    margin-bottom: 100px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .card{
+    border: 10px grey solid;
+
+  }
+  .card-body{
+    background-color: grey;
+  }
+
+  .btn-primary{
+    background-color:green;
+    border: 1px green solid;
+  }
+
+  /*
+  --------------------------------------------------------------
+  FAQs
+  --------------------------------------------------------------
+  */
+  .main_respuestas{
+    background-image: url("../img/backHome.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100%;
+  }
+
+  .FAQs{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .titulo-FAQs{
+    margin-top: 50px;
+    font-weight: bolder;
+  }
+
+  /* REGISTRO DE USUARIO*/
+  .main_registro{
+    font-family: 'Karla', sans-serif;
+     background-image: url("../img/backHome.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding-top:70px;
+
+  }
+  .registroDeUsuario .inputEspacio{
+    background: none;
+    border-style:none;
+    border-bottom:solid 1px;
+    margin-bottom:5%;
+    width: 50%;
+  }
+  .inputValidar{
+    background: none;
+    border-style:none;
+    border-bottom:solid 1px;
+    margin-bottom:5%;
+    width: 50%;
+    border:1px solid red ;
+
+  }
+  .inputValidar:hover{
+    box-shadow: 0 0 15px red;
+  }
+  main .registroDeUsuario p label{
+    margin-top: 35px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 25px;
+  }
+   .registroDeUsuario{
+     margin-top:5%;
+     background-color: rgba(255, 255,255, 0.5);
+     border-radius: 2%;
+     display:flex;
+     flex-direction:column;
+     justify-content:center;
+     align-items:center;
+     text-align: center;
+   }
+   .botonRegistrar{
+     margin-bottom: 20px;
+   }
+  .registroDeUsuario h2{
+    padding-top:4%;
+  }
+  .registroDeUsuario .inputRegistrar{
+    background-color: #04042C;
+    color:white;
+    margin-bottom:4%;
+    padding: 1% 20%;
+    border-radius:3%;
+  }
+   /*TERMINA CSS REGISTRO DE USUARIO*/
+
+   /*********************************/
+   /****Inicio Estilo para login****/
+   /********************************/
+   /* .divFormLogin{
+     position:absolute;
+   } */
+   #bodyLogin{
+    background-image: url('../img/backHome.jpg');
+    background-size: 100%;
+    display: flow-root;
+   }
+  .container{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+      font-family: 'Karla', sans-serif;
+      text-align: center;
+      margin-top:15%;
+      margin-bottom: 20%;
+  }
+  .login-content-logo{
+      width: 100px;
+      height: 100px;
+      margin:auto;
+      margin-bottom: -50px;
+  }
+  .login-content-logo img{
+      width: 100%;
+      height: 100%;
+  }
+  .login-content-form{
+    background-color: #ECECEC;
+    padding-top: 15%;
+    border-radius: 5%;
+    max-width: 400px;
+    margin:auto;
+    position: initial;
+  }
+  .login{
+    background-color: #04042C;
+    padding: 0 25%;
+    border-style: none;
+    border-radius: 5%;
+    color:white;
+  }
+  .forgotPsw a, .footerLogin a{
+    color: #9393cf;
+  }
+  .inputNombreLogin, .inputPassLogin{
+    border-style: none;
+    background-color: #ECECEC;
+  }
+  .nombre, .password{
+    margin: 5%;
+  }
+  .forgotPsw{
+    margin-top: 10%;
+    padding-bottom: 3%
+  }
+  .inputNombreLogin,.inputPassLogin{
+    border-bottom: 1px solid black;
+  }
+   /*********************************/
+   /****Fin Estilo para login****/
+   /********************************/
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #BABABA;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {text-decoration: underline;}
+
+
+   /*********************************/
+  /***Inicio Preguntas Frecuentes***/
+   /********************************/
+
+  .contentPregFrecuentes{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .preguntasFrecuentes{
+    display: flex;
+    padding-left: 3%;
+    flex-direction: row;
+   background-image: url("../img/backHome.jpg");
+    color: black;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    border-radius: 2%;
+    font-size: 1.1em;
+  }
+  .preguntasFrecuentes ul,li{
+    display: block;
+  }
+  .preguntasFrecuentes li{
+    padding-bottom: 3%;
+  }
+  .preguntasFrecuentes a{
+    color:#1929a8;
+  }
+
+   /*********************************/
+  /***Fin Preguntas Frecuentes***/
+   /********************************/
+    /*********************************/
+  /***    Inicio Editar Perfil     ***/
+   /********************************/
+   .content-edit-perfil{
+     font-family:  'Karla', sans-serif;
+   }
+   .editarPerfil{
+    background-image: url("../img/backHome.jpg");
+   }
+  .menu-edit-perfil{
+    float:left;
+  }
+  .info-perfil{
+    float: left;
+    text-align: center;
+    margin: center;
+    width: 100%;
+    background-color: rgba(255,255,255,0.2);
+
+  }
+  .info-perfil img{
+      width: 100%;
+      height: 50%;
+  }
+
+  .detalle-perfil, .detalle-preferencias, .detalle-medio-pago{
+    float: left;
+    text-align: center;
+    padding-top: 5%;
+    margin-top:5%;
+    align-items: center;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 2%;
+
+  }
+  .detalle-perfil ul{
+    padding: 0px 0px;
+
+  }
+  .detalle-perfil ul li input, .info-perfil .nombreApellido{
+    width: 60%;
+    border: none;
+    background: none;
+    border-bottom: 1px solid;
+    text-align: center
+  }
+  .detalle-perfil ul li{
+    padding-bottom: 3%;
+  }
+
+  .detalle-preferencias, .detalle-medio-pago{
+    width: 100%;
+  }
+  .detalle-medio-pago{
+    margin-bottom:5%;
+  }
+  .content-edit-perfil{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .user-editar-perfil, .user-editar-preferencias, .user-medio-pago{
+    display: inline;
+  }
+  .menu-edit-perfil ul{
+    display: inline-flex;
+    padding: 0px 0px;
+  }
+  .user-editar-perfil, .user-editar-preferencias, .user-medio-pago{
+    margin: auto;
+    text-align: center;
+  }
+  .select-vehiculos{
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+  }
+  .btn-editar-perfil, .btn-eliminar-perfil{
+    width: 50%;
+    float: left;
+    text-align: center;
+   }
+   .btn-editar-perfil hr, .btn-eliminar-perfil hr{
+     width: 80%;
+     background: -webkit-linear-gradient(left, red, blue, #82B2EE);
+     background: -moz-linear-gradient(left, red, blue, #82B2EE);
+     background: -o-linear-gradient(left, red, blue, #82B2EE);
+   }
+  .btn-upload-image{
+    width: 45%;
+
+  }
+  .v1{
+        height: 5%;
+        border-left: 2px solid;
+        position: absolute;
+        left: 51%;
+        margin-left: -3px;
+  }
+
+
+    /*********************************/
+  /***    Fin Editar Perfil      ***/
+   /********************************/
+   /*
+    /*****************************************************/
+   /****Inicio Responsive login y Preguntas Frecuentes****/
+   /*****************************************************/
+    @media (min-width: 360px)
+   {
+     /* .preguntasFrecuentes{
+       margin-left: 9%;
+       padding-right: 12%;
+       font-size: 0.9em;
+       align-items: center;
+       margin-top: 35%;
+     }
+     .registroDeUsuario input{
+      font-size: 85%;
+    }
+    .registroDeUsuario{
+      padding-left: 2%;
+      width: 88%;
+      margin-left: 5%;
+      font-size:100%;
+    }
+    main .registroDeUsuario p label{
+      display: block;
+    } */
+    .login-content-logo{
+      width: 150px;
+      height: 150px;
+      max-width: 500px;
+      margin-bottom: -75px;
+    }
+    .login-content-form{
+      padding-top: 80px;
+    }
+    .info-perfil img{
+      width: 350px;
+      height: 350px;
+    }
+    .content-edit-perfil{
+      /* max-width: 500px; */
+      height: 100%;
+      margin: auto;
+    }
+   }
+   @media (min-width:991px){
+
+    .login-content-form {
+      padding-top: 9%;
+    }
+    .content-edit-perfil{
+      display: flex;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      padding-top: 10%;
+      flex-direction: row;
+      justify-content: space-around;
+      /* align-items: center; */
+    }
+    .menu-edit-perfil{
+      display: none;
+    }
+    .info-perfil, .detalle-perfil, .detalle-preferencias, .detalle-medio-pago{
+      max-width: 500px;
+      display: table;
+    }
+    .detalle-perfil, .detalle-preferencias, .detalle-medio-pago{
+      max-width: 700px;
+    }
+    .contenedor-form-edit{
+      display: flex;
+      flex-direction: column;
+      display: table;
+    }
+   }
+   /*
+  @media (min-width: 460px) and (max-width: 700px)
+  {
+  .content .userImg {
+      width:25%;
+      margin-bottom: -17%;
+      margin-top: 3%;
+      position: relative;
+    }
+    .formLogin{
+      text-align:center;
+      padding-top: 15%;
+      position: initial;
+    }
+
+    .preguntasFrecuentes{
+      margin-left: 9%;
+      padding-right: 12%;
+    }
+  }
+  @media (min-width: 700px) and (max-width: 1024px)
+  {
+  .content .userImg {
+      width:22%;
+      margin-bottom: -12%;
+      margin-top: 3%;
+      position: relative;
+    }
+    .formLogin{
+      text-align:center;
+      padding-top: 11%;
+      position: initial;
+    }
+    .preguntasFrecuentes{
+      margin-left: none;
+      padding-right: none;
+      font-size: 1em;
+      align-items: center;
+      margin-top: 17%;
+    }
+    main .registroDeUsuario p label{
+      display: block;
+    }
+  } */
+  /* @media (min-width: 1024px)
+  {
+    .container .userImg {
+
+      width:22%;
+      margin-bottom: -7%;
+      margin-top: 3%;
+      padding-top: 10%;
+      position: relative;
+      z-index: 2;
+    }
+    .formLogin{
+      text-align:center;
+      padding-top: 11%;
+      position: initial;
+    }
+
+  } */
+
+  /********************************************************/
+  /****Fin Responsive para login y preguntas frecuentes****/
+  /********************************************************/
+
+
+  /* A PARTIR DE ACA SE ESTILEA PARA RESPONSIVE */
+
+
+  /* HOME START */
+  @media (min-width:50px) and (max-width:480px) {
+
+    /* Header START */
+    .home{
+      max-width: 480px;
+    }
+
+    header{
+      height: 140px;
+      width: 480px;
+      position: inherit;
+    }
+
+    .header_menu{
+      width: 480px;
+      height: 120px;
+    }
+
+    header nav{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin:0px;
+      padding: 0px;
+    }
+
+    #options a{
+      font-weight: bolder;
+
+      color: white;
+    }
+
+    .dropdown-menu.show{
+      background: black;
+    }
+
+    .lista_titulo{
+      padding: 0;
+      margin: 0;
+    }
+
+    .lista_menu{
+      display: none;
+    }
+
+    .dropdown{
+      display: inline-block;
+      background-color: grey;
+      border-radius: 30px;
+    }
+  .lista_menu #logout form input{
+      background: none;
+      border: none;
+      background-image: url(../img/logout.png);
+      background-size: cover;
+      margin: 0px;
+      background-position: center;
+      width: 25px;
+    }
+    /* Header END */
+
+    /* Body START */
+    .main_home{
+      width: 350px;
+    }
+
+    .contenedor-titulo-autos{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 30px;
+      margin-left: 140px;
+      /* background-color: rgba(255, 255,255, 0.7); */
+      width: 350px;
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    .bloque_autos{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 15px 15px 15px 15px;
+      margin-left: 140px;
+      width: 350px;
+      /* background-color: rgba(255, 255,255, 0.5); */
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .card{
+      margin-bottom: 15px;
+    }
+
+    .contenedor-titulo-pickups{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 30px;
+      margin-left: 140px;
+      /* background-color: rgba(255, 255,255, 0.7); */
+      width: 350px;
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    .bloque_pickups{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 350px;
+      /* background-color: rgba(255, 255,255, 0.5); */
+      margin-bottom: 30px;
+      margin-left: 140px;
+      padding: 15px 15px 15px 15px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .contenedor-titulo-van{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      /* background-color: rgba(255, 255,255, 0.7); */
+      width: 350px;
+      margin-left: 32px;
+      margin-left: 140px;
+      font-family: 'Montserrat', sans-serif;
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    .bloque_van{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 350px;
+      /* background-color: rgba(255, 255,255, 0.5); */
+      margin-bottom: 30px;
+      margin-left: 140px;
+      padding: 15px 15px 15px 15px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    /* Body END */
+
+    /* Footer START */
+    footer{
+      height: 560px;
+      width: 480px;
+      box-sizing: border-box;
+    }
+
+    .footer_info{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      width:auto;
+    }
+
+    .empresa{
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 20px;
+      width: 152px;
+    }
+
+    .ayuda{
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 20px;
+      width: 152px;
+    }
+
+    .categoria{
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 20px;
+      width: 152px;
+    }
+
+    .mpagos{
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      align-items: flex-start;
+      margin: 20px;
+      width: 152px;
+    }
+
+    .copyright p {
+      text-decoration: none;
+      color: grey;
+      font-family: 'Dosis', sans-serif;
+      text-align: center;
+    }
+    /* Footer END */
+   .row .userImg{
+      width: 50%;
+      margin-left: 24%;
+      margin-bottom:-20%;
+      z-index: 1;
+    }
+  .row .labelrememberMe{
+    margin-left: 43%;
+  }
+
+    /* preguntasFrecuentes */
+    .main_respuestas{
+      width: 480px;
+      padding-bottom: 70px;
+    }
+
+    .copyright{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      border-top: 0.5px solid white;
+      padding-top: 20px;
+      width: 100%;
+      background:black;
+    }
+  }
+ /********************************************************/
+  /****     Inicio de estilo para el home             ****/
+  /********************************************************/
+  .home-nuestros-servicios{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .servicio-item{
+    margin: 15px;
+    align-items: center;
+    border:1px solid gray;
+    padding: 20px 20px;
+    border-radius: 10px;
+    max-width: 310px;
+  }
+  .home-container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+  }
+.servicio-item:hover  .img-servicio {
+ -webkit-transform:scale(1.3) ;
+ transform:scale(1.3) ;
+ }
+.servicio-item:hover {
+ overflow:hidden ;
+ background:rgba(228, 226, 226, 0.438);
+ color: black;
+}
+.counter1,.counter2,.counter3,.counter4{
+    font-weight: bold;
+    font-size: 27px;
+}
+.home-nuestro-crecimiento{
+    width: 100%;
+    background-image: url("../img/laptop.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.fondo-nuestro-crecimiento{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(8, 8, 66,0.7);
+    height: 100%;
+    width: 100%;
+}
+.new-clients{
+    font-size: 20px;
+    margin: 20px 20px;
+    padding: 30px 30px;
+    color: white;
+}
+.title-crecimiento{
+    align-self: center;
+    margin: auto;
+    height: 100%;
+}
+ /********************************************************/
+  /****        Fin de diseño para el home            ****/
+  /********************************************************/
+
+/*Estilo para el video de la vista vehicles*/
+  video::-webkit-media-controls {
+    display: none;
+}
+.lo-nuevo{
+background-color: white;
+display: flex;
+flex-direction: column;
+background-attachment: fixed;
+padding: 0px;
+margin: 0px;
+display: inline;
+}
+.vehiculo-item{
+    display:inline-block;
+}
+
+
+
+

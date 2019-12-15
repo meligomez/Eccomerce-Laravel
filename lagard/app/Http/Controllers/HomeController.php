@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\HomeClients;
+use App\HomeServices;
+
 
 class HomeController extends Controller
 {
@@ -23,6 +26,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+       $clients= $this->getAllClients();
+       $services=$this->getAllServices();
+        return view('home',compact('clients','services'));
+    }
+
+
+    public function getAllClients(){
+        $clients= HomeClients::all();
+        return $clients;
+    }
+    public function getAllServices(){
+        return $services= HomeServices::all();
     }
 }
