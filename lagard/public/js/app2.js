@@ -18,3 +18,27 @@ function count(clase,valor){
   count('.counter3',50);
   count('.counter4',560);
 
+function incrementar(){
+    if(Number (document.querySelector('#cantidad').value) >0){
+        var resul=Number (document.querySelector('#cantidad').value);
+        resul ++;
+        console.log(resul);
+        return resul;
+    }
+    else{
+        document.querySelector('#cantidad').value=1;
+        console.log(resul);
+        return resul;
+    }
+
+}
+function decrementar(){
+    if(Number (document.querySelector('#cantidad').value) >0){
+        cant=document.querySelector('#cantidad').value -1;
+        return cant;
+    }
+    var cant=0;
+    cant=document.querySelector('#cantidad').value -1;
+    return cant;
+
+}

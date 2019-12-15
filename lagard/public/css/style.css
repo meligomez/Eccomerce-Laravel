@@ -1141,3 +1141,22 @@ display: inline;
 .detalles-tecnicos{
     float: left;
 }
+.fotos-vehiculo{
+    float: left;
+}
+.precio-venta{
+
+    text-align: center;
+}
+#nombre-vehiculo{
+    text-align: center;
+}
+.selects{
+    width: 700px;
+    text-align: center;
+}
+.contenedor-detalles{
+
+    box-sizing: border-box;
+
+}

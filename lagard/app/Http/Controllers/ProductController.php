@@ -19,4 +19,7 @@ class ProductController extends Controller
        $unVehiculo= Product::find($idVehiculo);
        return view('detalle-vehiculo',compact('unVehiculo'));
     }
+    public function agregarCarrito(Request $unVehiculo){
+        dd($unVehiculo["anio"]);
+    }
 }

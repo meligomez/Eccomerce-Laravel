@@ -29,6 +29,6 @@ Route::get('/edit/user')->name('editUser');
 
 //Rutas del vehículo
 Route::get('/vehicles', 'ProductController@index')->name('vehicles');
-Route::get('vehicles/{idVehiculo}','ProductController@detalleVehiculo');
-
+Route::get('/vehicles/{idVehiculo}','ProductController@detalleVehiculo');
+Route::post('/vehicles','ProductController@agregarCarrito');
 
