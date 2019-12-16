@@ -27,6 +27,7 @@ class MigracionTablas extends Migration
         $table->dateTime('vencimiento')->nullable();
         $table->double('numero', 8,0)->nullable();
         $table->double('codigo', 8, 2)->nullable();
+        $table->timestamps();
     });
     //3 Compra
     Schema::create('purchases', function (Blueprint $table) {
@@ -38,6 +39,7 @@ class MigracionTablas extends Migration
         $table->unsignedBigInteger('medioPago_id');
         $table->foreign('medioPago_id')->references('id')->on('payments');
         $table->boolean('estado')->default(1);
+        $table->timestamps();
     });
     //4 Producto
     Schema::create('products', function (Blueprint $table) {
@@ -48,10 +50,8 @@ class MigracionTablas extends Migration
         $table->boolean('estado')->default(1);
         $table->decimal('precio', 10, 2);
         $table->integer('stock');
-        $table->string('anio');
-        $table->string('color');
-        $table->string('tipoCombustible');
         $table->string('tipoProducto');
+        $table->timestamps();
     });
     //5 Detalle del producto
     Schema::create('detail_products', function (Blueprint $table) {
@@ -69,6 +69,7 @@ class MigracionTablas extends Migration
         $table->decimal('precio', 10, 2);
         $table->unsignedBigInteger('tipoProduct_id');
         $table->foreign('tipoProduct_id')->references('id')->on('products');
+        $table->timestamps();
     });
     //7 Compra_item (tabla intermedia)
     Schema::create('items_purchases', function (Blueprint $table) {
@@ -78,6 +79,7 @@ class MigracionTablas extends Migration
         $table->unsignedBigInteger('item_id');
         $table->foreign('item_id')->references('id')->on('items');
         $table->integer('descuentoPorcentaje');
+        $table->timestamps();
     });
     //8 Carrito
     Schema::create('carts', function (Blueprint $table) {
@@ -85,6 +87,7 @@ class MigracionTablas extends Migration
         $table->unsignedBigInteger('user_id');
         $table->foreign('user_id')->references('id')->on('users');
         $table->boolean('estado')->default(1);
+        $table->timestamps();
     });
     //9 Carrito_producto (tabla intermedia)
     Schema::create('carts_products', function (Blueprint $table) {
@@ -93,8 +96,12 @@ class MigracionTablas extends Migration
         $table->foreign('carrito_id')->references('id')->on('carts');
         $table->unsignedBigInteger('product_id');
         $table->foreign('product_id')->references('id')->on('products');
-        $table->integer('cantidad');
-    });
+        $table->integer('cantidad')->nullable();
+        $table->string('anio');
+        $table->string('color');
+        $table->string('tipoCombustible');
+        $table->timestamps();
+    })
     }
 
     /**

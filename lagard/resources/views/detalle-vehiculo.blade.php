@@ -50,9 +50,18 @@
             <p>Precio:{{ $unVehiculo->precio }}</p>
             <div class="cantidad-btn">
                 <h2>Cantidad: </h2>
-                <input type="number" name="" id="cantidad">
-                <input type="button" onclick="document.getElementById('cantidad').value = valorAIncrementar++"  value="../img/add.svg" alt="carro-de-compras" style="width:20px;">
-                <input type="button" onclick="decrementar()"><img src="../img/subtract.svg" alt="carro-de-compras" style="width:20px;">
+                <input type="number" name="cantidad" id="cantidad" value="0">
+                {{-- <input type="button" onclick="incrementar()" name="cant" class="btn-default" />
+                <input type="button" onclick="decrementar()" name="cant" class="btn-default"/> --}}
+                <button type="button" style="background-color:transparent; border-color:transparent;" onclick="incrementar()">
+                        <img src="../img/add.svg" alt="carro-de-compras" style="width:20px;">
+                      </button>
+                      <button type="button" style="background-color:transparent; border-color:transparent;" onclick="decrementar()">
+                            <img src="../img/subtract.svg" alt="carro-de-compras" style="width:20px;">
+                      </button>
+                {{-- <img src="../img/add.svg" alt="carro-de-compras" style="width:20px;">
+                <img src="../img/subtract.svg" alt="carro-de-compras" style="width:20px;"> --}}
+
                     {{ csrf_field() }}
                     <input type="submit" value="AÑADIR AL CARRITO">
             </div>
