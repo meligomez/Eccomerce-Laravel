@@ -14,8 +14,11 @@ class CartController extends Controller
         $userLogueado=auth()->user()->id;
         //una vez que traje su carrito, busco los productos que se encuentran en ese carrito
         $producto= new Product();
+        $carrito1= new Cart();
         $carrito= Cart::where('user_id', '=', $userLogueado)->get();
-
-        return view('see-cart');
+        //  $producto= $carrito->products;
+        $producto->id=1;
+        $arrayDeProductos=$carrito[1]->products();
+        dd( $arrayDeProductos)  ;
     }
 }

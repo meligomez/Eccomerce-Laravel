@@ -36,20 +36,22 @@ class ProductController extends Controller
             $vehiculo=$this->detallePorId($modelos["id"]);
             $vehiculo->cantidad=$modelos["cantidad"];
 
-        //Instancio un nuevo carrito y le seteo al user logueado.
+        //Actualizo el carrito, un nuevo carrito y le seteo al user logueado.
+        //La instancia del carrito (Una instancia por usuario logueado) se encuentra en el método authenticated de la clase AuthenticatesUsers
+        //en la carpeta laravel/frameworl/src/foundation/Auth
             $carrito= new Cart();
-            $carrito->user_id=auth()->user()->id;
-            $carrito->estado=1;
-            $carrito->save();
-            $idCarrito=$carrito->id;
+            $userLogueado=auth()->user()->id;;
+            $carrito = $carrito->where("user_id","=",$userLogueado)->get()[0];
          //Una vez que están instanciadas y seteadas las clases, creo la clase intermedia
             $anio=$modelos["anio"];
             $color= $modelos["color"];
             $tipoCombustible= $modelos["tipoCombustible"];
             //Inserto en la tabla intermedia los id y datos adicionales.
-            $carrito->products()->attach($vehiculo->id,['anio' => $anio,'color'=>$color,'tipoCombustible'=>$tipoCombustible]);
 
+            $carrito->products()->attach($vehiculo->id,['anio' => $anio,'color'=>$color,'tipoCombustible'=>$tipoCombustible]);
+            dd($carrito->products());
             return redirect('/vehicles');
+
 
         } catch (Exception $e) {
             echo 'Excepción capturada: ',  $e->getMessage(), "\n";
