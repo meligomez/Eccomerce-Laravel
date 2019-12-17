@@ -9,8 +9,12 @@
         Menu
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-        <button id="options" class="dropdown-item" type="button"  ><a href="{{ route('login') }}">INGRESA</button>
-        <button id="options" class="dropdown-item" type="button"  ><a href="{{ route('register') }}">REGISTRATE</button>
+        @guest
+            @if (Route::has('home'))
+                <button id="options" class="dropdown-item" type="button"  ><a href="{{ route('login') }}">INGRESA</button>
+                <button id="options" class="dropdown-item" type="button"  ><a href="{{ route('register') }}">REGISTRATE</button>
+            @endif
+        @endguest
         <button id="options" class="dropdown-item" type="button"><a href="{{ route('vehicles') }}">VEHICULOS</a></button>
         <button id="options" class="dropdown-item" type="button"><a href="{{ route('aboutUs') }}">NOSOTROS</a></button>
         <button id="options" class="dropdown-item" type="button"><a href="{{ route('buy') }}">COMPRA ACA</a></button>
