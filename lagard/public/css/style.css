@@ -1196,6 +1196,19 @@ ARRANCA ACA */
   display:flex;
   margin-top: 100px;
   background-color: rosybrown;}
+
+  .contenedorDeDatosEP{
+    justify-content: center;
+    width: 30%;
+    height: 100px;
+    background-color: red;
+  }
+
+
+
+
+
+  /*FIN EDITAR PERFIL*/
 #modalContainer {
 	background-color:rgba(0, 0, 0, 0.3);
 	position:absolute;

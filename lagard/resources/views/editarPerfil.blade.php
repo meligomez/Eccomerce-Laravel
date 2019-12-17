@@ -2,8 +2,8 @@
 
 @extends('layouts.app')
 <div class="contenedorEditarPerfil">
-    <div class="contenedor">
+    <div class="contenedorDeDatosEP">
 
-    
+
     </div>
 </div>
