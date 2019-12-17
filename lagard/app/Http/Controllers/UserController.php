@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
     public function logout()
     {
       Auth::logout();
-      $deletedRows = App\Flight::where('active', 0)->delete();
+      $useLogueado=auth()->user()->id;
+      $deletedRows = App\Cart::where('user_id','=',$useLogueado)->delete();
       if($deletedRows>0)
       {
           return redirect('login');
@@ -17,5 +19,18 @@ class UserController extends Controller
       else{
           return redirect('home');
       }
+    }
+    public function visualizarPerfil(){
+        $user= User::find($userLogueado);
+        return view('editarPerfil',compact('user'));
+    }
+    public function editarPerfil(Request $usuarioEditado){
+        $user= new User();
+        $user->name=$usuarioEditado["nombre"];
+        $user->email=$usuarioEditado["email"];
+        $user->foto=$usuarioEditado["foto"];
+        $user->password=$usuarioEditado["password"];
+        $user->save();
+        return redirect('home');
     }
 }

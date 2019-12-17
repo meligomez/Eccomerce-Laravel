@@ -33,7 +33,6 @@ Route::get('/vehicles/{idVehiculo}','ProductController@detalleVehiculo');
 Route::post('/vehicles','ProductController@agregarCarrito');
 
 //rutas de editar perfil
-Route::get('editarPerfil', function(){
-    return view('editarPerfil');
-})->name("editarPerfil");
+Route::get('editarPerfil', 'UserController@visualizarPerfil')->name("editarPerfil");
 Route::get('/cart-detail','CartController@verCarrito')->name('infoCarrito');
+Route::get('editarPerfil', 'UserController@editarPerfil')->name("editarPerfil");
