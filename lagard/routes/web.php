@@ -35,4 +35,4 @@ Route::post('/vehicles','ProductController@agregarCarrito');
 //rutas de editar perfil 
 Route::get('editarPerfil', function(){
     return view('editarPerfil');
-});
+})->name("editarPerfil");

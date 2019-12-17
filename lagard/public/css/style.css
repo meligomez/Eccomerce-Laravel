@@ -14,6 +14,10 @@ ESTILOS UNICOS PARA home.php
     margin: 0px;
   }
 
+  .containerDelHome1{
+    margin-top: 100px;
+  }
+
 
 
   /*
@@ -1185,4 +1189,11 @@ ARRANCA ACA */
 
 .card-header:first-child{
   text-align: center;
+}
+
+/*CSS PARA EDITAR PERFIL*/
+.contenedorEditarPerfil{
+  display:flex;
+  margin-top: 100px;;
+  background-color: rosybrown;
 }

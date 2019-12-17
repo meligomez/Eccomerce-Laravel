@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container  containerDelHome1">
 <div class="home-container">
         <div class="home-img-general">
                 <img src="/img/home-veicle.png" style="width: 100%;" alt="">

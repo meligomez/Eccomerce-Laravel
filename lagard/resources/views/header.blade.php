@@ -2,7 +2,7 @@
 <header>
     <nav class="header_menu">
     <ul class="lista_titulo">
-      <li class="titulo"><a href="home.php">Lagard</a></li>
+      <li class="titulo"><a href="{{ route('home') }}">Lagard</a></li>
     </ul>
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,7 +31,7 @@
         </li>
       </div>
       <li><a href=""><img src="../img/carrito.png" alt="carro-de-compras"></a></li>
-      <li><a href="editarPerfil.php"><img src="../img/settings.png" alt="configuracion"></a></li>
+      <li><a href="{{ route('editarPerfil') }}"><img src="../img/settings.png" alt="configuracion"></a></li>
       <li id="logout" style='display:none;'>
         <form action="" method="post">
           <input type="submit" value="" name="inputDeslogueo" style="background: none;border: none;background-image: url(../img/logout.png);
