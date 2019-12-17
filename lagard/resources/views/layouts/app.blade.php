@@ -33,7 +33,7 @@
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 
 </head>
-@extends('header')
+@extends('footer')
 <body>
 <div id="app">
     <main class="py-4">
@@ -42,5 +42,5 @@
 
     </div>
 </body>
-@extends('footer')
+@extends('header')
 </html>

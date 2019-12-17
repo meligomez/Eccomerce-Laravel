@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-        <div class="container">
+        <div class="containerDelLogin">
                 <div class="login-content-logo">
                   <img class="userImg" src="../img/Lagard3.png" alt="">
                 </div>

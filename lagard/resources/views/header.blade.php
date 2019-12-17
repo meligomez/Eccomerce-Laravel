@@ -1,3 +1,4 @@
+<!-- @secction('header'); -->
 <header>
     <nav class="header_menu">
     <ul class="lista_titulo">
@@ -40,3 +41,4 @@
     </ul>
   </nav>
 </header>
+<!-- @endsecction -->

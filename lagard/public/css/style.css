@@ -15,6 +15,7 @@ ESTILOS UNICOS PARA home.php
   }
 
 
+
   /*
   --------------------------------------------------------------
   HEADER
@@ -25,6 +26,7 @@ ESTILOS UNICOS PARA home.php
     height: 90px;
     width: 100%;
     position: fixed;
+    top:0;
     opacity: 0.8;
     z-index: 4;
   }
@@ -129,10 +131,11 @@ ESTILOS UNICOS PARA home.php
     align-items: center;
     border-top: 1px grey;
     border-bottom: 1px grey;
-    height: 310px;
+    /* height: 310px; */
     background-color: black;
     width: 100%;
-    padding: 30px;
+    height: 180px;
+    padding: 10px;
   }
 
   .footer_info{
@@ -246,6 +249,11 @@ ESTILOS UNICOS PARA home.php
     color: grey;
     font-family: 'Dosis', sans-serif;
   }
+
+  .ultimoTextoFooter{
+margin: 0px;
+  }
+
   .copyright p:hover{text-decoration: none;color: white;font-family: 'Dosis', sans-serif;}
 
   /*
@@ -460,14 +468,16 @@ ESTILOS UNICOS PARA home.php
     background-size: 100%;
     display: flow-root;
    }
-  .container{
-      margin:0;
-      padding:0;
+  .containerDelLogin{
+    margin-top: 100px;
+    margin-bottom: 100px;
+     /*  margin:0px;
+      padding:0px; */
       box-sizing: border-box;
       font-family: 'Karla', sans-serif;
       text-align: center;
-      margin-top:15%;
-      margin-bottom: 20%;
+ /*      margin-top:15%;
+      margin-bottom: 20%; */
   }
   .login-content-logo{
       width: 100px;
@@ -1159,4 +1169,20 @@ display: inline;
 
     box-sizing: border-box;
 
+}
+
+/*ACA ARRANCA ESTILO PARA LA VISTA DE VEHICLES*/
+.lanzamientos{
+  margin-top: 90px;
+}
+
+/*NO ENCONTRE EL CSS DE REGISTRO DE USUARIO
+ARRANCA ACA */
+.justify-content-center{
+  margin-top:100px;
+  margin-bottom: 100px;
+}
+
+.card-header:first-child{
+  text-align: center;
 }
