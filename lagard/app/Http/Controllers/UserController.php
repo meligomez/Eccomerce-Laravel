@@ -22,17 +22,18 @@ class UserController extends Controller
     }
     public function visualizarPerfil(){
         $userLogueado=auth()->user()->id;
-        
         $user= User::find($userLogueado);
         return view('editarPerfil',compact('user'));
     }
     public function editarPerfil(Request $usuarioEditado){
         $user= new User();
+        $userLogueado=auth()->user()->id;
         $user->name=$usuarioEditado["nombre"];
         $user->email=$usuarioEditado["email"];
         $user->foto=$usuarioEditado["foto"];
         $user->password=$usuarioEditado["password"];
         $user->save();
+        User::where('id', '=', $userLogueado)->update(array('name' =>$user->name,'email'=>$user->email,'foto'=>$user->foto,'password'=>$user->password ));
         return redirect('home');
     }
 }
