@@ -1255,8 +1255,7 @@ ARRANCA ACA */
 
   .infoYTitulo{
     display: flex;
-    
-    width: 65%;
+    width: 80%;
     height: 350px;
     flex-direction: column;
     justify-content: space-evenly;
@@ -1264,17 +1263,30 @@ ARRANCA ACA */
   }
 
   .tituloEP{
+   
     width: 90%;
-    height: 100px;
-    background-color: white ;
+    height: 45px;
+    border-bottom: black 1px solid;
+  }
+  .editarPerfilEP{
+    width: 100%;
+    font-size: 1.5em;
+   
+
   }
 
   .informacionEP{
+    display: flex;
+    flex-wrap: wrap;
     width: 90%;
-    height: 200px;
+    height: 250px;
     background-color: white;
 
   }
+  .tituloInfoEP{
+
+  }
+
 
 
 

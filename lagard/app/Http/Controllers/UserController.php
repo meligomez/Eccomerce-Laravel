@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 class UserController extends Controller
 {
 
@@ -21,6 +21,8 @@ class UserController extends Controller
       }
     }
     public function visualizarPerfil(){
+        $userLogueado=auth()->user()->id;
+        
         $user= User::find($userLogueado);
         return view('editarPerfil',compact('user'));
     }
