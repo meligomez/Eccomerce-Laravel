@@ -1193,15 +1193,87 @@ ARRANCA ACA */
 
 /*CSS PARA EDITAR PERFIL*/
 .contenedorEditarPerfil{
+ 
   display:flex;
-  margin-top: 100px;
-  background-color: rosybrown;}
+  flex-wrap: wrap;
+  justify-content: center;
+    align-items: center;
+ 
+  width: 100%;
+  height:500px; 
+}
 
   .contenedorDeDatosEP{
-    justify-content: center;
-    width: 30%;
+    display: flex;
+    margin-top: 70px;
+    width: 95%;
+    height: 400px;
+    background-color: rgb(223, 211, 211 ,0.7); 
+    
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .fotoYNombre{
+    display: flex;
+    
+    width: 25%;
+    height: 350px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
+  
+  .fotoEP{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 250px;
+  
+  }
+  .estaEsLaFoto{
+    width: 100%;
+    height: 100%;
+  }
+
+  .nombreEP{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 50px;
+   
+   align-items: center;
+   text-align: center;
+  }
+  .hNombreUsr{
+    width: 100%;
+    font-size: 1em;
+  }
+
+
+
+  .infoYTitulo{
+    display: flex;
+    
+    width: 65%;
+    height: 350px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .tituloEP{
+    width: 90%;
     height: 100px;
-    background-color: red;
+    background-color: white ;
+  }
+
+  .informacionEP{
+    width: 90%;
+    height: 200px;
+    background-color: white;
+
   }
 
 
