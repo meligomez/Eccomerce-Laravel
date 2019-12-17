@@ -101,7 +101,8 @@ class MigracionTablas extends Migration
         $table->string('color');
         $table->string('tipoCombustible');
         $table->timestamps();
-    })
+    });
+
     }
 
     /**
