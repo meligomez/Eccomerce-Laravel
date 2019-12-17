@@ -20,7 +20,10 @@ class SeederProducts extends Seeder
         "estado"=>True,
         "precio"=>"1.9001",
         "stock"=>"100",
-        "tipoProducto"=>"AUTO"
+        "tipoProducto"=>"AUTO",
+        "anio"=>"2018",
+        "color"=>"Negro",
+        "tipoCombustible"=>"Nafta"
         ]);
         DB::table("products")->insert(
             [
@@ -30,7 +33,10 @@ class SeederProducts extends Seeder
             "estado"=>True,
             "precio"=>"1.9001",
             "stock"=>"100",
-            "tipoProducto"=>"AUTO"
+            "tipoProducto"=>"AUTO",
+            "anio"=>"2018",
+            "color"=>"Negro",
+            "tipoCombustible"=>"Nafta"
         ]);
         DB::table("products")->insert(
             [
@@ -40,7 +46,10 @@ class SeederProducts extends Seeder
             "estado"=>True,
             "precio"=>"1.90",
             "stock"=>"100",
-            "tipoProducto"=>"AUTO"
+            "tipoProducto"=>"AUTO",
+            "anio"=>"2018",
+            "color"=>"Negro",
+            "tipoCombustible"=>"Nafta"
         ]);
         DB::table("products")->insert(
             [
@@ -50,7 +59,10 @@ class SeederProducts extends Seeder
             "estado"=>True,
             "precio"=>"1.9",
             "stock"=>"100",
-            "tipoProducto"=>"AUTO"
+            "tipoProducto"=>"AUTO",
+            "anio"=>"2018",
+            "color"=>"Negro",
+            "tipoCombustible"=>"Nafta"
         ]);
         DB::table("products")->insert(
             [
@@ -60,7 +72,10 @@ class SeederProducts extends Seeder
             "estado"=>True,
             "precio"=>"1.9",
             "stock"=>"100",
-            "tipoProducto"=>"AUTO"
+            "tipoProducto"=>"AUTO",
+            "anio"=>"2018",
+            "color"=>"Negro",
+            "tipoCombustible"=>"Nafta"
         ]);
         DB::table("products")->insert(
             [
@@ -70,7 +85,10 @@ class SeederProducts extends Seeder
             "estado"=>True,
             "precio"=>"1.9",
             "stock"=>"100",
-            "tipoProducto"=>"AUTO"
+            "tipoProducto"=>"AUTO",
+            "anio"=>"2018",
+            "color"=>"Negro",
+            "tipoCombustible"=>"Nafta"
         ]);
 
 
