@@ -51,6 +51,9 @@ class MigracionTablas extends Migration
         $table->decimal('precio', 10, 2);
         $table->integer('stock');
         $table->string('tipoProducto');
+        $table->string('anio');
+        $table->string('color');
+        $table->string('tipoCombustible');
         $table->timestamps();
     });
     //5 Detalle del producto
@@ -97,9 +100,6 @@ class MigracionTablas extends Migration
         $table->unsignedBigInteger('product_id');
         $table->foreign('product_id')->references('id')->on('products');
         $table->integer('cantidad')->nullable();
-        $table->string('anio');
-        $table->string('color');
-        $table->string('tipoCombustible');
         $table->timestamps();
     });
 

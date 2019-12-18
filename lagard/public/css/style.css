@@ -1193,14 +1193,14 @@ ARRANCA ACA */
 
 /*CSS PARA EDITAR PERFIL*/
 .contenedorEditarPerfil{
- 
+
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
     align-items: center;
- 
+
   width: 100%;
-  height:500px; 
+  height:500px;
 }
 
   .contenedorDeDatosEP{
@@ -1208,29 +1208,29 @@ ARRANCA ACA */
     margin-top: 70px;
     width: 95%;
     height: 400px;
-    background-color: rgb(223, 211, 211 ,0.7); 
-    
+    background-color: rgb(223, 211, 211 ,0.7);
+
     justify-content: space-evenly;
     align-items: center;
   }
-  
+
   .fotoYNombre{
     display: flex;
-    
+
     width: 25%;
     height: 350px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
+
   }
-  
+
   .fotoEP{
     display: flex;
     flex-wrap: wrap;
     width: 70%;
     height: 250px;
-  
+
   }
   .estaEsLaFoto{
     width: 100%;
@@ -1242,7 +1242,7 @@ ARRANCA ACA */
     flex-wrap: wrap;
     width: 70%;
     height: 50px;
-   
+
    align-items: center;
    text-align: center;
   }
@@ -1263,7 +1263,7 @@ ARRANCA ACA */
   }
 
   .tituloEP{
-   
+
     width: 90%;
     height: 45px;
     border-bottom: gray 1px solid;
@@ -1271,7 +1271,7 @@ ARRANCA ACA */
   .editarPerfilEP{
     width: 100%;
     font-size: 1.5em;
-   
+
 
   }
 
@@ -1285,11 +1285,11 @@ ARRANCA ACA */
     justify-content: start;
     align-items: flex-start;
     font-family: 'Dosis', sans-serif;
-   
+
   }
   .tituloInfoEP{
     width: 100%;
-    
+
   }
 
   .infoPerfilEditar{
@@ -1314,8 +1314,8 @@ ARRANCA ACA */
     width: 100%;
     height: 50px;
   }
-  
-  
+
+
 
 
 
@@ -1435,3 +1435,182 @@ code {
 	width:90%;
   top:30%;}
 }
+.lanzamientos{
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    margin-left: 8%;
+    margin-top: -103px;
+}
+.lanzamientos img{
+    width: 48%;
+    float: left;
+    margin-top: 3%;
+    height: 330px;
+    margin-right: 1%;
+    margin-top:3%;
+}
+.lanzamientos video{
+    float: left;
+    margin-left:1%;
+}
+.comment{
+    margin-top: 7%;
+    font-family: 'Dosis', sans-serif;
+}
+.vehicles-container{
+    background: rgba(255, 255, 255, 0.2);
+    font-family: 'Karla', sans-serif;
+}
+.titulo-loNuevo h2{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 3%;
+}
+
+/*CAROUSEL!*/
+
+
+.cta-100 {
+    margin-top: 50px;
+    padding-left: 8%;
+    padding-top: 5%;
+  }
+  .col-md-4{
+      padding-bottom:20px;
+      height: 500px;
+  }
+
+  .white {
+    color: #fff !important;
+  }
+  .mt{float: left;margin-top: -20px;padding-top: 20px;}
+  .mt a{
+    background-color: #252545;
+    color: white;
+    border: solid 4px #252546;
+    border-radius: 7px;
+  }
+
+  .bg-blue-ui {
+    background-color: #252545 !important;
+  }
+  figure img{width:300px;}
+
+  #blogCarousel {
+    padding-bottom: 100px;
+  }
+
+  .blog .carousel-indicators {
+    left: 0;
+    top: -50px;
+    height: 50%;
+
+  }
+
+
+  /* The colour of the indicators */
+
+  .blog .carousel-indicators li {
+    background: #708198;
+    border-radius: 50%;
+    width: 15   px;
+    height: 8px;
+  }
+
+  .blog .carousel-indicators .active {
+    background: #252545;
+  }
+
+
+
+
+  .item-carousel-blog-block {
+    outline: medium none;
+    padding: 15px;
+  }
+
+  .item-box-blog {
+    border: 1px solid #dadada;
+    text-align: center;
+    z-index: 4;
+    padding: 20px;
+  }
+
+  .item-box-blog-image {
+    position: relative;
+  }
+
+  .item-box-blog-image figure img {
+    width: 100%;
+    height: auto;
+  }
+
+  .item-box-blog-date {
+    position: absolute;
+    z-index: 5;
+    padding: 4px 20px;
+    top: -20px;
+    right: 8px;
+    background-color: #41cb52;
+  }
+
+  .item-box-blog-date span {
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .item-box-blog-date span.mon {
+    font-size: 18px;
+  }
+
+  .item-box-blog-date span.day {
+    font-size: 16px;
+  }
+
+  .item-box-blog-body {
+    padding: 10px;
+  }
+
+  .item-heading-blog a h5 {
+    margin: 0;
+    line-height: 1;
+    text-decoration:none;
+    transition: color 0.3s;
+  }
+
+  .item-box-blog-heading a {
+      text-decoration: none;
+  }
+
+  .item-box-blog-data p {
+    font-size: 13px;
+  }
+
+  .item-box-blog-data p i {
+    font-size: 12px;
+  }
+
+  .item-box-blog-text {
+    max-height: 100px;
+    overflow: hidden;
+  }
+
+  .mt-10 {
+    float: left;
+    margin-top: -10px;
+    padding-top: 10px;
+  }
+
+  .btn.bg-blue-ui.white.read {
+    cursor: pointer;
+    padding: 4px 20px;
+    float: left;
+    margin-top: 10px;
+  }
+
+  .btn.bg-blue-ui.white.read:hover {
+    box-shadow: 0px 5px 15px inset #4d5f77;
+  }

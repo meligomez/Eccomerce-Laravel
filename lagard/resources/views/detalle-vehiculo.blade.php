@@ -27,20 +27,9 @@
         <div class="detalles-tecnicos">
 
             <div class="selects">
-                Año:<select name="anio" id="anio">
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                </select>
-                Color:<select name="color" id="color">
-                    <option value="Blanco">Blanco</option>
-                    <option value="Negro">Negro</option>
-                    <option value="Rojo">Rojo</option>
-                    <option value="Gris">Gris</option>
-                </select>
-                Tipo de Combustible:<select name="tipoCombustible" id="tipoCombustible">
-                    <option value="Nafta">Nafta</option>
-                    <option value="Diesel">Diesel</option>
-                </select>
+                <p>Año:{{ $unVehiculo->anio }}</p>
+                <p>Color:{{ $unVehiculo->color }}</p>
+                <p>Tipo de combustible:{{ $unVehiculo->tipoCombustible }}</p>
             </div>
             <h2>{{ $unVehiculo->descripcion }}</h2>
             <h2>Disponibilidad: {{ $unVehiculo->stock }}</h2>

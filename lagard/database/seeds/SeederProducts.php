@@ -21,6 +21,9 @@ class SeederProducts extends Seeder
         "precio"=>"1.9001",
         "stock"=>"100",
         "tipoProducto"=>"AUTO",
+        "anio"=>"2018",
+        "color"=>"Negro",
+        "tipoCombustible"=>"Nafta"
         ]);
         DB::table("products")->insert(
             [
@@ -31,6 +34,9 @@ class SeederProducts extends Seeder
             "precio"=>"1.9001",
             "stock"=>"100",
             "tipoProducto"=>"AUTO",
+            "anio"=>"2018",
+            "color"=>"Negro",
+            "tipoCombustible"=>"Nafta"
         ]);
         DB::table("products")->insert(
             [
@@ -41,6 +47,9 @@ class SeederProducts extends Seeder
             "precio"=>"1.90",
             "stock"=>"100",
             "tipoProducto"=>"AUTO",
+            "anio"=>"2018",
+            "color"=>"Negro",
+            "tipoCombustible"=>"Nafta"
         ]);
         DB::table("products")->insert(
             [
@@ -51,6 +60,9 @@ class SeederProducts extends Seeder
             "precio"=>"1.9",
             "stock"=>"100",
             "tipoProducto"=>"AUTO",
+            "anio"=>"2018",
+            "color"=>"Negro",
+            "tipoCombustible"=>"Nafta"
         ]);
         DB::table("products")->insert(
             [
@@ -61,6 +73,9 @@ class SeederProducts extends Seeder
             "precio"=>"1.9",
             "stock"=>"100",
             "tipoProducto"=>"AUTO",
+            "anio"=>"2019",
+            "color"=>"Blanco",
+            "tipoCombustible"=>"Nafta"
         ]);
         DB::table("products")->insert(
             [
@@ -71,6 +86,9 @@ class SeederProducts extends Seeder
             "precio"=>"1.9",
             "stock"=>"100",
             "tipoProducto"=>"AUTO",
+            "anio"=>"2018",
+            "color"=>"Rojo",
+            "tipoCombustible"=>"Diesel"
         ]);
 
 
