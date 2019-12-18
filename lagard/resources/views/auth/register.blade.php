@@ -39,7 +39,7 @@
                  @enderror
                </p>
                <p>
-               <input type="file" name="avatar" id="avatar" placeholder="Ingrese su foto de perfil">
+               <input type="file" name="foto" id="foto" placeholder="Ingrese su foto de perfil">
               <p>
                <p>
                  <img src="../img/lock.svg" alt="" width="6%">

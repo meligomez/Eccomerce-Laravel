@@ -1644,10 +1644,11 @@ code {
 .segunda-seccion h3{
     text-align: end;
 }
-.detalle-auto form input{
+.eliminar-btn-product{
     color: white;
     background-color: #252545;
     border: none;
+    float: right;
 }
 .title-carrito{
     margin-left: 5%;
@@ -1658,4 +1659,9 @@ code {
 color: white;
 background-color: #252545;
 border: none;
+}
+.cartInput{
+    color: white;
+    background-color: #252545;
+    border: none;
 }
