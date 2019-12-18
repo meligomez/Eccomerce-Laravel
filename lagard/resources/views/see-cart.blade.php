@@ -6,8 +6,11 @@
     </div>
     <div class="detalles-vehiculos"  style="overflow:hidden;">
     <ul class="cart">
-        <form action="" method="post">
+
         @forelse ($carrito as $unProducto)
+
+        <input type="hidden" name="id" value="{{ $unProducto->idCP }}">
+
             <li>
                 <div class="imagen-auto" style="float:left; text-align: center;">
                     <img src="{{ $unProducto->foto }}" style="width:350px" alt="">
@@ -33,10 +36,11 @@
                     </div>
                 </div>
             </li>
-
             @empty
             <h2>¡Aún no hay productos en el carrito!</h2>
         @endforelse
+        <form action="/buy" method="post">
+            {{ csrf_field() }}
         <input class="cartInput" style="float:right;" type="submit" value="Finalizar Compra" >
     </form>
     </ul>

@@ -39,3 +39,7 @@ Route::post('editarPerfil', 'UserController@editarPerfil')->name("editarPerfil")
 //carrito
 Route::get('/see-cart','CartController@verCarrito')->name('infoCarrito');
 Route::post('/see-cart','CartController@eliminarProductoDelCarrito')->name('deleteProduct');
+
+//compra
+Route::post('/buy','PurchaseController@realizarVenta');
+// Route::get('/buy','PurchaseController@verCompra');

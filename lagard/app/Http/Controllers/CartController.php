@@ -34,6 +34,13 @@ class CartController extends Controller
         $producto= $carrito->products();
         return $producto;
     }
+    public function obtenerCarrito(){
+        $carrito = new Cart();
+        $userLogueado=auth()->user()->id;
+        $carrito= Cart::where('user_id', '=', $userLogueado)->get()[0];
+        $carrito= $carrito->idCartsProducts($carrito->id);
+        return $carrito;
+    }
 
     public function eliminarProductoDelCarrito(Request $idAEliminar){
         $idProducto=$idAEliminar["id"];
