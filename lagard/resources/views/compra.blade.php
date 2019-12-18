@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
 <div class="datos-compra-general">
-    <form action="/home" method="post">
+    <form action="/compra" method="post">
+            {{ csrf_field() }}
         <div class="contenedor-compra" style="overflow: hidden;">
             <div class="primer-seccion-compra" style="float:left;">
                 <div class="datos-comprador" >
@@ -19,30 +20,24 @@
                         <div id="area" style="display: none;">
                                 <div class="master-card">
                                   <div class="card">
-                                    <div class="title">CREDIT CARD</div>
+                                    <div  id="titleCard" class="title"></div>
                                     <div class="input-number"><span class="title-number">CARD NUMBER</span>
-                                      <div class="inputs-number">
-                                        <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
-                                        <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
-                                        <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
-                                        <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+                                        <div class="inputs-number">
+                                            <input type="text" maxlength="4" name="number-card1" placeholder="0000" required="required"/>
+                                            <input type="text" maxlength="4" name="number-card2" placeholder="0000" required="required"/>
+                                            <input type="text" maxlength="4" name="number-card3" placeholder="0000" required="required"/>
+                                            <input type="text" maxlength="4" name="number-card4" placeholder="0000" required="required"/>
                                       </div>
                                       <div class="selects-date selecters">
-                                        <div class="day-select"><span>DAY</span>
-
+                                        <div class="day-select">
+                                           <span>Vencimiento:</span>
                                           </select>
                                         </div>
-                                        <div class="year-select"><span>YEAR</span>
-                                          <select id="dates">
-
-                                          </select>
+                                        <div class="year-select">
+                                            <input name="vencimiento" type="month" id="start" name="start"
+                                                min="2018-03" value="2019-12" style="font-size:0.5rem; width: 70%">
+                                           </div>
                                         </div>
-                                        <div class="">
-                                                <label for="start">Fecha de Vencimiento:</label>
-                                                 <input type="month" id="start" name="start"
-                                                     min="2018-03" value="2019-12">
-                                                </div>
-                                      </div>
                                     </div>
                                     <div class="mark-gold">
                                       <div class="round">
@@ -57,12 +52,14 @@
                                   <div class="card-back">
                                     <div class="tire"></div>
                                     <div class="secret-area">
-                                      <input type="text" maxlength="3" name="number-card" placeholder="000" required="required"/>
+                                      <input type="text" maxlength="3" name="number-card5" placeholder="000" required="required"/>
                                     </div>
                                     <div class="chip-card"></div>
                                   </div>
                                 </div>
                                 <div class="button-sent">
+                                        <button id="back">VOLTAR</button>
+                                        <button id="continue">CONTINUAR</button>
                                 </div>
                               </div>
 

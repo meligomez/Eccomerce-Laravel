@@ -18,6 +18,11 @@ class PurchaseController extends Controller
     }
 
     public function finalizarVenta(Request $datosCompra){
-
+        $primero=$datosCompra['number-card1'];
+        $segundo=$datosCompra['number-card2'];
+        $tercero=$datosCompra['number-card3'];
+        $cuarto=$datosCompra['number-card4'];
+        $codigo=$datosCompra['number-card5'];
+        $vencimiento=$datosCompra['vencimiento'];
     }
 }

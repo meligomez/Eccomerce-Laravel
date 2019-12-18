@@ -218,8 +218,26 @@ function verMedioPago(){
     mpSeleccionado = document.querySelector('#medioPago').value;
     if(mpSeleccionado!="EFEC")
     {
-        document.querySelector('#area').style.display="";
+        if(mpSeleccionado==="DEB"){
+
+            document.querySelector('#titleCard').innerHTML="DEBIT CARD";
+            document.querySelector('#area').style.display="";
+        }
+        else{
+            document.querySelector('#titleCard').innerHTML="CREDIT CARD";
+            document.querySelector('#area').style.display="";
+        }
+
     }else{
         document.querySelector('#area').style.display="none";
     }
 }
+! function(a) {
+    a(function() {
+        a(".button-sent #back").hide(), a(".button-sent #continue").click(function(b) {
+            a("#area .master-card").css("transform", "rotateY(180deg)"), a(".button-sent #back").show()
+        }), a(".button-sent #back").click(function(b) {
+            a("#area .master-card").css("transform", "rotateY(0deg)"), a(this).hide()
+        })
+    })
+}(jQuery);
