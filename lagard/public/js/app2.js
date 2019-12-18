@@ -43,7 +43,7 @@ function count(clase,valor){
 
 
 //alert
-var ALERT_TITLE = "¡Registrado!";
+var ALERT_TITLE = "¡Mensaje!";
 var ALERT_BUTTON_TEXT = "Ok";
 
 if(document.getElementById) {
@@ -84,7 +84,7 @@ function createCustomAlert(txt) {
 	alertObj.style.display = "block";
 
 }
-
+//ALERT
 function removeCustomAlert() {
 	document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
 }
@@ -108,7 +108,7 @@ $(document).ready(function () {
     ResCarouselSize();
 
 
-
+//CAROUSEL!
 
     $(window).resize(function () {
         ResCarouselSize();

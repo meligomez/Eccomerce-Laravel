@@ -1154,12 +1154,13 @@ display: inline;
 }
 .detalles-tecnicos{
     float: left;
+    width: 25%;
 }
 .fotos-vehiculo{
     float: left;
 }
 .precio-venta{
-
+    display: inline;
     text-align: center;
 }
 #nombre-vehiculo{
@@ -1614,3 +1615,47 @@ code {
   .btn.bg-blue-ui.white.read:hover {
     box-shadow: 0px 5px 15px inset #4d5f77;
   }
+/*FIN CAROUSEL*/
+
+/*DETALLE DEL VEHICULO*/
+.vehicles-container{
+    margin-top: 18%;
+}
+.name-vehicle{
+    font-size: 2.2rem;
+    text-align: center;
+}
+#cantidad{
+    width: 3%;
+    text-align: center;
+    border-radius: 7px;
+    border: solid 1px;
+    background: white;
+}
+.detalles-vehiculos ul li{
+    border-bottom: solid 2px grey;
+    display: flex;
+    width: 97%;
+    margin-bottom: 3%;
+}
+.detalles-vehiculos ul{
+    margin-left: 10%;
+}
+.segunda-seccion h3{
+    text-align: end;
+}
+.detalle-auto form input{
+    color: white;
+    background-color: #252545;
+    border: none;
+}
+.title-carrito{
+    margin-left: 5%;
+    border-bottom: solid grey;
+    width: 93%;
+}
+.precio-venta input{
+color: white;
+background-color: #252545;
+border: none;
+}
