@@ -43,3 +43,8 @@ Route::post('/see-cart','CartController@eliminarProductoDelCarrito')->name('dele
 //compra
 Route::post('/buy','PurchaseController@realizarVenta');
 // Route::get('/buy','PurchaseController@verCompra');
+
+//subir articulos
+Route::get('/subirArticulos', function(){
+    return view('subirArticulos');
+  });

@@ -12,7 +12,7 @@
         <div class="infoYTitulo">
             <div class="tituloEP"> <h1 class="editarPerfilEP"> Editar Perfil :</h1></div>
             <div class="informacionEP">
-                <div class="tituloInfoEP"> <h1 class="infoPerfilEditar">Informcion Personal :</h1>
+                <div class="tituloInfoEP"> <h1 class="infoPerfilEditar">Informacion Personal :</h1>
                 <div class="infomacionParaEditar">
                     <ul >
                     <li class="liInformacionEspacio"> <label for="">- Nombre Usuario :</label> <input type="text"  readonly name="user" value="{{$user->username}}" ></li>
