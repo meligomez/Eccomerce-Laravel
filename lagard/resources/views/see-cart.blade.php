@@ -41,7 +41,7 @@
         @endforelse
         <form action="/buy" method="post">
             {{ csrf_field() }}
-        <input class="cartInput" style="float:right;" type="submit" value="Finalizar Compra" >
+        <input class="cartInput" style="float:right;" type="submit" value="Continuar Compra" >
     </form>
     </ul>
     </div>

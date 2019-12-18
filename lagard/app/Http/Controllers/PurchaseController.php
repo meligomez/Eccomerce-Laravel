@@ -13,10 +13,11 @@ class PurchaseController extends Controller
         $carrito=new CartController();
         $carrito=$carrito->obtenerCarrito();
         $user=User::find($idUserLogueado);
+        $total=0;
         return view('/compra',compact('user','carrito'));
     }
 
-    public function verCompra(){
+    public function finalizarVenta(Request $datosCompra){
 
     }
 }

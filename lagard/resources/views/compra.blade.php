@@ -1,29 +1,86 @@
 @extends('layouts.app')
 @section('content')
 <div class="datos-compra-general">
-    <form action="" method="post">
+    <form action="/home" method="post">
         <div class="contenedor-compra" style="overflow: hidden;">
             <div class="primer-seccion-compra" style="float:left;">
                 <div class="datos-comprador" >
                     <p> Nombre: {{ $user->email }}</p>
-
+                    <p></p>
                 </div>
                 <div class="datos-medio-pago">
                     <ul>
                         <li>Medio de Pago:</li>
+                        <select name="medioPago" id="medioPago" onchange="verMedioPago()">
+                            <option value="EFEC">Efectivo</option>
+                            <option value="DEB">Tarjeta de Débito</option>
+                            <option value="CRED">Tarjeta de Crédito</option>
+                        </select>
+                        <div id="area" style="display: none;">
+                                <div class="master-card">
+                                  <div class="card">
+                                    <div class="title">CREDIT CARD</div>
+                                    <div class="input-number"><span class="title-number">CARD NUMBER</span>
+                                      <div class="inputs-number">
+                                        <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+                                        <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+                                        <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+                                        <input type="text" maxlength="4" name="number-card" placeholder="0000" required="required"/>
+                                      </div>
+                                      <div class="selects-date selecters">
+                                        <div class="day-select"><span>DAY</span>
+
+                                          </select>
+                                        </div>
+                                        <div class="year-select"><span>YEAR</span>
+                                          <select id="dates">
+
+                                          </select>
+                                        </div>
+                                        <div class="">
+                                                <label for="start">Fecha de Vencimiento:</label>
+                                                 <input type="month" id="start" name="start"
+                                                     min="2018-03" value="2019-12">
+                                                </div>
+                                      </div>
+                                    </div>
+                                    <div class="mark-gold">
+                                      <div class="round">
+                                        <div class="circles">
+                                          <div class="circle-1"> </div>
+                                          <div class="circle-2"> </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="name"><span>{{ $user->name }}</span></div>
+                                  </div>
+                                  <div class="card-back">
+                                    <div class="tire"></div>
+                                    <div class="secret-area">
+                                      <input type="text" maxlength="3" name="number-card" placeholder="000" required="required"/>
+                                    </div>
+                                    <div class="chip-card"></div>
+                                  </div>
+                                </div>
+                                <div class="button-sent">
+                                </div>
+                              </div>
+
+
+
 
                     </ul>
                 </div>
             </div>
             <div class="segunda-seccion-compra" style="float:left;">
-                    <ul class="cart">
+                    <ul class="cart" >
                             @forelse ($carrito as $unProducto)
                             <input type="hidden" name="id" value="{{ $unProducto->idCP }}">
                                 <li>
                                     <div class="imagen-auto" style="float:left; text-align: center;">
                                         <img src="{{ $unProducto->foto }}" style="width:350px" alt="">
                                     </div>
-                                    <div class="detalle-auto"  style="float:left; width:50%;">
+                                    <div class="detalle-auto"  style="float:left; width:40%;">
                                         <div style="overflow:hidden;">
                                             <h1 style="float:left;">{{ $unProducto->nombre }}, {{ $unProducto->idCP }}</h1>
 
@@ -36,18 +93,19 @@
                                         <div class="segunda-seccion">
                                             <p>Tipo de Combustible: {{ $unProducto->tipoCombustible }}</p>
                                             <p>Cantidad: {{ $unProducto->cantidad }}</p>
-                                            <h4>Total Unidad: {{ $unProducto->precio }}</h4>
+                                            <p id="precio" value="{{$unProducto->precio }}">Total Unidad: {{ $unProducto->precio }}</p>
+
                                         </div>
                                     </div>
                                 </li>
-                                <h3>Total:{{  }}</h3>
                                 @empty
                                 <h2>¡Aún no hay productos en el carrito!</h2>
                             @endforelse
                         </ul>
             </div>
-
         </div>
+        <p id="total" ></p>
+        <input id="totalHidden" type="hidden" name="totalHidden">
     <input type="submit" value="Finalizar Compra">
     </form>
 </div>

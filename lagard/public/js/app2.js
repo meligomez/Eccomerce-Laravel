@@ -198,3 +198,28 @@ $(document).ready(function () {
     }
 
 });
+
+
+function obtenerTotal(){
+    var total=0.00;
+//   console.log($('ul.cart').children('li').children('.detalle-auto').children('.segunda-seccion').children('#precio'));
+    let elemento= $('ul.cart li');
+    for (let index = 0; index < elemento.length; index++) {
+        total += parseFloat(document.querySelector('#precio').getAttribute('value'));
+    }
+    let totalString= total.toString()
+    document.querySelector('#total').innerHTML=totalString;
+    document.querySelector('#totalHidden').innerHTML=totalString;
+   return total;
+}
+obtenerTotal();
+
+function verMedioPago(){
+    mpSeleccionado = document.querySelector('#medioPago').value;
+    if(mpSeleccionado!="EFEC")
+    {
+        document.querySelector('#area').style.display="";
+    }else{
+        document.querySelector('#area').style.display="none";
+    }
+}
