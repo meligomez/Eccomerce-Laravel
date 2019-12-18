@@ -36,10 +36,11 @@
                                         <div class="segunda-seccion">
                                             <p>Tipo de Combustible: {{ $unProducto->tipoCombustible }}</p>
                                             <p>Cantidad: {{ $unProducto->cantidad }}</p>
-                                            <h3>Total Unidad: {{ $unProducto->precio }}</h3>
+                                            <h4>Total Unidad: {{ $unProducto->precio }}</h4>
                                         </div>
                                     </div>
                                 </li>
+                                <h3>Total:{{  }}</h3>
                                 @empty
                                 <h2>¡Aún no hay productos en el carrito!</h2>
                             @endforelse
