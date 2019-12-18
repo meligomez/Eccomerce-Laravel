@@ -26,8 +26,8 @@
                     <li class="liInformacionEspacio"> <label for="">- Foto : </label> <input type="file" name="foto"></li>
                 </ul>
                 <div class="botonesEditarPerfil"> 
-<input type="submit" value="Guardar" > {{csrf_field()}}
-<input type="button" value="Volver">
+<input class="botonGuardar"  type="submit" value="Guardar" > {{csrf_field()}}
+<input class="botonEnviar"  type="button" value="Volver">
 
                 </div>
                 </div></div>
