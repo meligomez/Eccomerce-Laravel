@@ -27,8 +27,8 @@
                 </ul>
                 <div class="botonesEditarPerfil">
                         <input class="botonGuardar"  type="submit" value="Guardar" > {{csrf_field()}}
-                        <input class="botonEnviar"  type="button" value="Volver">
-                </div>
+                        <a  class="botonEnviar" href="{{ route('home') }}">volver</a>
+                                    </div>
                 </div></div>
 
             </div>

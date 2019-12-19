@@ -1331,7 +1331,8 @@ ARRANCA ACA */
   }
 
 .botonEnviar{
-
+  text-align: center;
+    width: 60px;
   color:white;
     background-color: #252545;
     border:none;
