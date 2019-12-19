@@ -23,10 +23,10 @@
                                     <div  id="titleCard" class="title"></div>
                                     <div class="input-number"><span class="title-number">CARD NUMBER</span>
                                         <div class="inputs-number">
-                                            <input type="text" maxlength="4" name="number-card1" placeholder="0000" required="required"/>
-                                            <input type="text" maxlength="4" name="number-card2" placeholder="0000" required="required"/>
-                                            <input type="text" maxlength="4" name="number-card3" placeholder="0000" required="required"/>
-                                            <input type="text" maxlength="4" name="number-card4" placeholder="0000" required="required"/>
+                                            <input  class="inputs-number2" type="text" maxlength="4" name="number-card1" placeholder="0000" "/>
+                                            <input  class="inputs-number2" type="text" maxlength="4" name="number-card2" placeholder="0000""/>
+                                            <input class="inputs-number2" type="text" maxlength="4" name="number-card3" placeholder="0000" "/>
+                                            <input class="inputs-number2"  type="text" maxlength="4" name="number-card4" placeholder="0000" "/>
                                       </div>
                                       <div class="selects-date selecters">
                                         <div class="day-select">
@@ -52,7 +52,7 @@
                                   <div class="card-back">
                                     <div class="tire"></div>
                                     <div class="secret-area">
-                                      <input type="text" maxlength="3" name="number-card5" placeholder="000" required="required"/>
+                                      <input  class="inputs-number2" type="text" maxlength="3" name="number-card5" placeholder="000""/>
                                     </div>
                                     <div class="chip-card"></div>
                                   </div>

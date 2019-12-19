@@ -209,7 +209,7 @@ function obtenerTotal(){
     }
     let totalString= total.toString()
     document.querySelector('#total').innerHTML=totalString;
-    document.querySelector('#totalHidden').innerHTML=totalString;
+    document.querySelector('#totalHidden').value=totalString;
    return total;
 }
 obtenerTotal();
@@ -222,14 +222,19 @@ function verMedioPago(){
 
             document.querySelector('#titleCard').innerHTML="DEBIT CARD";
             document.querySelector('#area').style.display="";
+            $('.inputs-number2').prop("required", true);
         }
         else{
             document.querySelector('#titleCard').innerHTML="CREDIT CARD";
             document.querySelector('#area').style.display="";
+            $('.inputs-number2').prop("required", true);
         }
 
     }else{
+        // $('.inputs-number2').removeAttr("required");
+        $('.inputs-number2').prop("required", false);
         document.querySelector('#area').style.display="none";
+
     }
 }
 ! function(a) {
