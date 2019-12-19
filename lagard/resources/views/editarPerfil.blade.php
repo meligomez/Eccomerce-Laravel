@@ -1,13 +1,13 @@
 @section('content')
 
 @extends('layouts.app')
-<form action="POST" method="/editarPerfil">
+<form action="/editarPerfil" method="POST" enctype="multipart/form-data">
 <div class="contenedorEditarPerfil">
     <div class="contenedorDeDatosEP">
         <div class="fotoYNombre">
-            <div class="fotoEP"><img class="estaEsLaFoto" src="../img/sinFoto.jpg" alt="perfil"></div>
+            <div class="fotoEP"><img class="estaEsLaFoto" src="/storage/{{ $user->foto }}" alt="perfil"></div>
             <div class="nombreEP"><h1 class="hNombreUsr">{{$user->name}}</div></div>
-        
+
 
         <div class="infoYTitulo">
             <div class="tituloEP"> <h1 class="editarPerfilEP"> Editar Perfil :</h1></div>
@@ -21,21 +21,20 @@
 
                     <li class="liInformacionEspacio"> <label for="">- Email :</label> <input type="text" name="email"  value="{{$user->email}}"></li>
 
-                    <li class="liInformacionEspacio"> <label for="">- Contraseña :</label> <input type="text" name="password" ></li>
+                    <li class="liInformacionEspacio"> <label for="">- Contraseña :</label> <input type="password" name="password" value="{{ auth()->user()->password }}" ></li>
 
                     <li class="liInformacionEspacio"> <label for="">- Foto : </label> <input type="file" name="foto"></li>
                 </ul>
-                <div class="botonesEditarPerfil"> 
-<input class="botonGuardar"  type="submit" value="Guardar" > {{csrf_field()}}
-<input class="botonEnviar"  type="button" value="Volver">
-
+                <div class="botonesEditarPerfil">
+                        <input class="botonGuardar"  type="submit" value="Guardar" > {{csrf_field()}}
+                        <input class="botonEnviar"  type="button" value="Volver">
                 </div>
                 </div></div>
-                
+
             </div>
         </div>
 
-      
+
     </div>
 </div>
 </form>

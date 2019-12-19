@@ -6,13 +6,17 @@
         <div class="contenedor-compra" style="overflow: hidden;">
             <div class="primer-seccion-compra" style="float:left;">
                 <div class="datos-comprador" >
-                    <p> Nombre: {{ $user->email }}</p>
+                    <p style="font-size: 2em;">Datos Personales:</p>
+                    <p> Usuario: {{ $user->username }}</p>
+                    <p> Nombre: {{ $user->name }}</p>
+                    <p> Email: {{ $user->email }}</p>
+
                     <p></p>
                 </div>
                 <div class="datos-medio-pago">
                     <ul>
-                        <li>Medio de Pago:</li>
-                        <select name="medioPago" id="medioPago" onchange="verMedioPago()">
+                        <li style="font-size: 2em;">Medio de Pago:</li>
+                        <select class="medio-pago" name="medioPago" id="medioPago" onchange="verMedioPago()">
                             <option value="EFEC">Efectivo</option>
                             <option value="DEB">Tarjeta de Débito</option>
                             <option value="CRED">Tarjeta de Crédito</option>
@@ -34,8 +38,8 @@
                                           </select>
                                         </div>
                                         <div class="year-select">
-                                            <input name="vencimiento" type="month" id="start" name="start"
-                                                min="2018-03" value="2019-12" style="font-size:0.5rem; width: 70%">
+                                            <input name="vencimiento" type="date" id="start" name="start"
+                                                min="2018-03" value="2019-12" style="font-size:0.5rem; width: 90%">
                                            </div>
                                         </div>
                                     </div>
@@ -74,25 +78,27 @@
                             @forelse ($carrito as $unProducto)
                             <input type="hidden" name="id" value="{{ $unProducto->idCP }}">
                                 <li>
-                                    <div class="imagen-auto" style="float:left; text-align: center;">
-                                        <img src="{{ $unProducto->foto }}" style="width:350px" alt="">
-                                    </div>
-                                    <div class="detalle-auto"  style="float:left; width:40%;">
-                                        <div style="overflow:hidden;">
-                                            <h1 style="float:left;">{{ $unProducto->nombre }}, {{ $unProducto->idCP }}</h1>
+                                    <div>
+                                            <div class="imagen-auto" style="float:left; text-align: center;">
+                                                    <img src="{{ $unProducto->foto }}" style="width:350px" alt="">
+                                                </div>
+                                                <div class="detalle-auto"  style="float:left; width:40%;">
+                                                    <div style="overflow:hidden;">
+                                                        <h1 style="float:left;">{{ $unProducto->nombre }}, {{ $unProducto->idCP }}</h1>
 
-                                        </div>
-                                        <div class="primera-seccion">
-                                            <p>Descripcion: {{ $unProducto->descripcion }}</p>
-                                            <p>Año: {{ $unProducto->anio }}</p>
-                                            <p>Color: {{ $unProducto->color }}</p>
-                                        </div>
-                                        <div class="segunda-seccion">
-                                            <p>Tipo de Combustible: {{ $unProducto->tipoCombustible }}</p>
-                                            <p>Cantidad: {{ $unProducto->cantidad }}</p>
-                                            <p id="precio" value="{{$unProducto->precio }}">Total Unidad: {{ $unProducto->precio }}</p>
+                                                    </div>
+                                                    <div class="primera-seccion">
+                                                        <p>Descripcion: {{ $unProducto->descripcion }}</p>
+                                                        <p>Año: {{ $unProducto->anio }}</p>
+                                                        <p>Color: {{ $unProducto->color }}</p>
+                                                    </div>
+                                                    <div class="segunda-seccion">
+                                                        <p>Tipo de Combustible: {{ $unProducto->tipoCombustible }}</p>
+                                                        <p>Cantidad: {{ $unProducto->cantidad }}</p>
+                                                        <p id="precio" value="{{$unProducto->precio }}">Total Unidad: {{ $unProducto->precio }}</p>
 
-                                        </div>
+                                                    </div>
+                                                </div>
                                     </div>
                                 </li>
                                 @empty
@@ -101,9 +107,12 @@
                         </ul>
             </div>
         </div>
-        <p id="total" ></p>
+        <p id="total" style="font-size: 3em; text-align: right;margin-right: 10%;" ></p>
         <input id="totalHidden" type="hidden" name="totalHidden">
-    <input type="submit" value="Finalizar Compra">
+        <div style="font-size: 1.2em; text-align: center;">
+                <input type="submit" value="Finalizar Compra" class="finalizar-compra">
+        </div>
+
     </form>
 </div>
 

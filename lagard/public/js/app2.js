@@ -208,7 +208,7 @@ function obtenerTotal(){
         total += parseFloat(document.querySelector('#precio').getAttribute('value'));
     }
     let totalString= total.toString()
-    document.querySelector('#total').innerHTML=totalString;
+    document.querySelector('#total').innerHTML='Total: $'+totalString;
     document.querySelector('#totalHidden').value=totalString;
    return total;
 }

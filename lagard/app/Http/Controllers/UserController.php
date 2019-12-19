@@ -26,14 +26,17 @@ class UserController extends Controller
         return view('editarPerfil',compact('user'));
     }
     public function editarPerfil(Request $usuarioEditado){
-        $user= new User();
-        $userLogueado=auth()->user()->id;
-        $user->name=$usuarioEditado["nombre"];
-        $user->email=$usuarioEditado["email"];
-        $user->foto=$usuarioEditado["foto"];
-        $user->password=$usuarioEditado["password"];
-        $user->save();
+            $ruta=$usuarioEditado->file("foto")->store("public");
+            $nombreArchivo=basename($ruta);
+            $user= new User();
+            $userLogueado=auth()->user()->id;
+            $user->name=$usuarioEditado["nombre"];
+            $user->email=$usuarioEditado["email"];
+            $user->password=$usuarioEditado["password"];
+            $user->foto=$nombreArchivo;
+        // $user->save();
         User::where('id', '=', $userLogueado)->update(array('name' =>$user->name,'email'=>$user->email,'foto'=>$user->foto,'password'=>$user->password ));
         return redirect('home');
     }
+
 }
