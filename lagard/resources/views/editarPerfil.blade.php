@@ -23,7 +23,7 @@
 
                     <li class="liInformacionEspacio"> <label for="">- Contraseña :</label> <input type="text" name="password" ></li>
 
-                    <li class="liInformacionEspacio"> <label for="">- Foto : </label> <input type="file" name="foto"></li>
+                    <li class="liInformacionEspacio "> <label  for="">- Foto : </label> <input class="letraNegraParaImput" type="file" name="foto"></li>
                 </ul>
                 <div class="botonesEditarPerfil"> 
 <input class="botonGuardar"  type="submit" value="Guardar" > {{csrf_field()}}
