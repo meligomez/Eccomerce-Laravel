@@ -164,6 +164,7 @@ ESTILOS UNICOS PARA home.php
   .nosotros_footer{
     font-weight: 700;
     font-size: 20px;
+    color: white;
   }
 
   .ayuda{
@@ -233,7 +234,11 @@ ESTILOS UNICOS PARA home.php
     justify-content: space-around;
   }
 
-  .mpagos p a:hover{text-decoration: none;color: white;font-family: 'Dosis', sans-serif;}
+  .mpagos p a:hover{
+    text-decoration: none;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+  }
   .mpagos_footer{
     font-weight: 700;
     font-size: 20px;
@@ -379,13 +384,13 @@ margin: 0px;
 
   /*
   --------------------------------------------------------------
-  FAQs
+  PREGUNTAS FRECUENTES
   --------------------------------------------------------------
   */
   .main_respuestas{
-    background-image: url("../img/backHome.jpg");
+  /*   background-image: url("../img/backHome.jpg");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:cover; */
     width: 100%;
   }
 

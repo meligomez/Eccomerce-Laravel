@@ -2,7 +2,7 @@
     <div class="footer_info">
         <div class="empresa">
           <p><a href="#" class="nosotros_footer">Nosotros</a></p>
-          <p><a href="preguntasFrecuentes.php">Preguntas frecuentes</a></p>
+          <p><a href="{{ route('preguntasFrecuentes') }}">Preguntas frecuentes</a></p>
         <!--   <p><a href="#">Nuestras politicas</a></p>
           <p><a href="#">Feedback</a></p>
           <p><a href="#">Mapa del sitio</a></p>
@@ -16,7 +16,7 @@
         </div> -->
         <div class="categoria">
           <p><a href="#" class="categoria_footer">Categorias</a></p>
-          <p><a href="#">Autos</a></p>
+          <p><a href="{{ route('vehicles') }}">Autos</a></p>
         <!--   <p><a href="#">Pickups</a></p>
           <p><a href="#">Vans</a></p> -->
         </div>

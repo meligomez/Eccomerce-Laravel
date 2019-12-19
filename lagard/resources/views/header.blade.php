@@ -12,7 +12,7 @@
                 <button id="options" class="dropdown-item" type="button"  ><a href="{{ route('login') }}">INGRESA</button>
                 <button id="options" class="dropdown-item" type="button"  ><a href="{{ route('register') }}">REGISTRATE</button>
         <button id="options" class="dropdown-item" type="button"><a href="{{ route('vehicles') }}">VEHICULOS</a></button>
-        <button id="options" class="dropdown-item" type="button"><a href="{{ route('aboutUs') }}">NOSOTROS</a></button>
+        
         <button id="options" class="dropdown-item" type="button"><a href="{{ route('buy') }}">COMPRA ACA</a></button>
         <button id="options" class="dropdown-item" type="button"><a href="{{ route('editarPerfil') }}">AJUSTES</a></button>
         <button id="options" class="dropdown-item" type="button"><a href="{{ route('logout') }}">CERRAR SESION</a></button>
@@ -22,7 +22,7 @@
       <li><a href="{{ route('login') }}"  >INGRESA</a></li>
       <li><a href="{{ route('register') }}" >REGISTRATE</a></li>
       <li><a href="{{ route('vehicles') }}">VEHICULOS</a></li>
-      <li><a href="{{ route('aboutUs')}}">NOSOTROS</a></li>
+      
       <div class="dropdown menuLogueado">
         <li class="dropbtn">PERFIL
           <div class="dropdown-content">

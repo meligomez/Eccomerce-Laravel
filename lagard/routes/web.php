@@ -48,4 +48,10 @@ Route::post('/buy','PurchaseController@realizarVenta');
 Route::get('/subirArticulos', function(){
     return view('subirArticulos');
   });
+
+  Route::get('/preguntasFrecuentes', function(){
+    return view('preguntasFrecuentes');
+  })->name('preguntasFrecuentes');
+
 Route::post('/compra','PurchaseController@finalizarVenta');
+
