@@ -1702,18 +1702,18 @@ border: none;
     align-items: center;
 
   width: 100%;
-  height:750px;
+  height:800px;
 }
 
   .contenedorDeDatosSV{
     display: flex;
-    /* margin-top: 50px;  */
+   
     width: 95%;
-    height: 570px;
+    height: 600px;
     background-color: rgba(255, 255, 255, 0.3);
 
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .fotoYNombreSV{
@@ -1803,6 +1803,9 @@ border: none;
   .liDatosEspacioSV{
     margin-bottom: 20px;
   }
+  .liDatoSinEspacio{
+    margin-bottom: 0px;
+  }
 
   .infomacionParaSubirSV{
     width: 100%;
@@ -1824,12 +1827,15 @@ border: none;
   }
 
 .botonEnviarSV{
-
-  color:white;
-    background-color: #252545;
-    border:none;
-    margin-right: 20px;
+  text-align: center;
+  width: 60px;
+color:white;
+  background-color: #252545;
+  border:none;
+  margin-right: 20px;
 }
+
+
   /*FIN SUBIR VEHICLES*/
 /*COMPRA - VISTA*/
 .datos-compra-general

@@ -34,14 +34,16 @@ class ProductController extends Controller
         //obtengo todos los datos del producto que quiere insertar en el carrito
             $vehiculo= new Product();
             $vehiculo=$this->detallePorId($modelos["id"]);
-            $vehiculo->cantidad=$modelos["cantidad"];
-        //La instancia del carrito (Una instancia por usuario logueado) se encuentra en el método authenticated de la clase AuthenticatesUsers
+           
+        //La instancia del carrito (Una instancia por usuario logueado) se encuentra en el método 
+        //authenticated de la clase AuthenticatesUsers
         //en la carpeta laravel/frameworl/src/foundation/Auth
             $carrito= new Cart();
             $userLogueado=auth()->user()->id;
             $carrito = Cart::where("user_id","=",$userLogueado)->get()[0];
+
             //Inserto en la tabla intermedia los id y datos adicionales.
-            $carrito->products()->attach($vehiculo->id,['cantidad' => $vehiculo->cantidad,]);
+            $carrito->products()->attach($vehiculo->id);
             return redirect('/vehicles');
 
 
