@@ -24,18 +24,19 @@ class MigracionTablas extends Migration
     Schema::create('payments', function (Blueprint $table) {
         $table->bigIncrements('id');
         $table->string('descripcion');
-        $table->dateTime('vencimiento')->nullable();
+        $table->string('vencimiento')->nullable();
         $table->double('numero', 8,0)->nullable();
-        $table->double('codigo', 8, 2)->nullable();
+        $table->double('codigo', 8,0)->nullable();
         $table->timestamps();
     });
     //3 Compra
     Schema::create('purchases', function (Blueprint $table) {
         $table->bigIncrements('id');
         $table->decimal('total', 8, 2);
-        $table->dateTime('fechaCompra');
+        $table->string('fechaCompra');
         $table->integer('descuentoPorcentaje')->nullable();
-        $table->string('envio');
+        $table->unsignedBigInteger('user_id');
+        $table->foreign('user_id')->references('id')->on('users');
         $table->unsignedBigInteger('medioPago_id');
         $table->foreign('medioPago_id')->references('id')->on('payments');
         $table->boolean('estado')->default(1);

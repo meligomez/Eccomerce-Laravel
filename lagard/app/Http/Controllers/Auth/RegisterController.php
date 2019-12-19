@@ -57,12 +57,23 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
+        $request = app('request');
+        if($request->hasfile('foto')){
+            $avatar = $request->file('foto')->store("public");
+            $nombreArchivo=basename($avatar);
+
+            // Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename) );
+        }
+        else
+        {
+            $nombreArchivo="";
+        }
             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
                 'username' =>$data['username'],
-                'foto'=>$data['foto']
+                'foto'=>$nombreArchivo
             ]);
     }
 }

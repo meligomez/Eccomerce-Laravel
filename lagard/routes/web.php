@@ -55,3 +55,5 @@ Route::get('/subirArticulos', function(){
 
 Route::post('/compra','PurchaseController@finalizarVenta');
 
+//Ruta para el logout
+Route::get('/logout','Auth\LoginController@logout')->name('logout');
